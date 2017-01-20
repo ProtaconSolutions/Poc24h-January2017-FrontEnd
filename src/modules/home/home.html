@@ -1,0 +1,14 @@
+<md-content class="md-padding no-padding-top" flex>
+  <md-input-container class="md-block" flex>
+    <label>
+      Valitse palvelu
+    </label>
+
+    <md-select data-ng-model="vm.serviceType">
+      <md-option data-ng-value="serviceType.id" data-ng-repeat="serviceType in vm.serviceTypes">
+        {{::serviceType.name}}
+      </md-option>
+    </md-select>
+  </md-input-container>
+
+</md-content>

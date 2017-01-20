@@ -1,6 +1,7 @@
 // Imports
 import angular from 'angular';
 import about from './about/about.module';
+import home from './home/home.module';
 import routes from './modules.routes';
 
 /**
@@ -11,6 +12,7 @@ import routes from './modules.routes';
 export default angular
   .module('app.modules', [
     about,
+    home,
   ])
   .run(routes)
   .name;

@@ -1,5 +1,5 @@
 // Imports
-import AboutController from './about.controller';
+import HomeController from './home.controller';
 import UserRoles from '../../core/auth/constants/userRoles';
 
 /**
@@ -8,17 +8,17 @@ import UserRoles from '../../core/auth/constants/userRoles';
  */
 export default function routing(RouterHelper) {
   const states = [{
-    state: 'modules.about',
+    state: 'modules.home',
     config: {
-      url: '/about',
-      title: 'About',
+      url: '/',
+      title: 'Palvelut',
       data: {
         access: UserRoles.ROLE_ANON,
       },
       views: {
         'content@': {
-          template: require('./about.html'),
-          controller: AboutController,
+          template: require('./home.html'),
+          controller: HomeController,
           controllerAs: 'vm',
         },
       },
