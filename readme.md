@@ -45,6 +45,7 @@ of workshops.
 - [ ] *As user i want to use 'contact me' form where i can request further information*. For example when i can bring my car.
 - [ ] *As user i want to see any offers local workshops has for me*.
 - [ ] As user i can buy selected offer.
+- [ ] Collect necessary demo data from customer.
 
 ## Other requirements
 - [ ] Application is used on browser.
