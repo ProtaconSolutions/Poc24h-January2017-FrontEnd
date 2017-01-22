@@ -14,6 +14,7 @@ import core from './core/core.module';
 import dependencies from './dependencies/dependencies.module';
 import layout from './layout/layout.module';
 import modules from './modules/modules.module';
+import resources from './resources/resource.module';
 import services from './services/services.module';
 
 import appConfiguration from './app.config';
@@ -23,6 +24,7 @@ const app = angular.module('app', [
   core,
   layout,
   modules,
+  resources,
   services,
 ]);
 
