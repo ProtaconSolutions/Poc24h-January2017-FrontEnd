@@ -1,9 +1,9 @@
 /**
- * @desc  Service type resource.
+ * @desc  Car brand resource.
  *
  * @ngInject
  */
-export default class ServiceTypeResource {
+export default class CarBrandResource {
   /**
    * Constructor of the class.
    *
@@ -13,7 +13,7 @@ export default class ServiceTypeResource {
    */
   constructor($resource, config) {
     return $resource(
-      `${config.API_URL}service_type/:id`,
+      `${config.API_URL}car_brand/:id`,
       {
         id: '@id',
       },
