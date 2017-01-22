@@ -1,6 +1,7 @@
 // Imports
 import HomeController from './home.controller';
 import UserRoles from '../../core/auth/constants/userRoles';
+import { serviceTypes } from './home.resolve';
 
 /**
  * @ngInject
@@ -20,6 +21,9 @@ export default function routing(RouterHelper) {
           template: require('./home.html'),
           controller: HomeController,
           controllerAs: 'vm',
+          resolve: {
+            _serviceTypes: serviceTypes,
+          },
         },
       },
     },

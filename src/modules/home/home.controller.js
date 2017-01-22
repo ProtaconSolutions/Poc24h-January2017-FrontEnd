@@ -1,5 +1,3 @@
-// Imports
-
 /**
  * @ngInject
  */
@@ -7,17 +5,14 @@ export default class HomeController {
   /**
    * Constructor of the class.
    *
+   * @param {ServiceType[]} _serviceTypes
    */
-  constructor() {
+  constructor(_serviceTypes) {
     this.serviceType = null;
     this.carBrand = null;
     this.location = '';
 
-    // TODO Get service types
-    this.serviceTypes = [
-      { id: 1, name: 'Palvelu 1' },
-      { id: 2, name: 'Palvelu 2' },
-    ];
+    this.serviceTypes = _serviceTypes;
 
     // TODO Get car brands
     this.carBrands = [
