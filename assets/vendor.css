@@ -17917,8 +17917,8 @@ md-tooltip {
 /* MaterialDesignIcons.com */
 @font-face {
   font-family: "Material Design Icons";
-  src: url(/_assets/d5247f90f15e16a67b0bc907bbf34b41.eot);
-  src: url(/_assets/d5247f90f15e16a67b0bc907bbf34b41.eot?#iefix&v=1.7.22) format("embedded-opentype"), url(/_assets/85f0bd26d0491015858074f6dfa2f33e.woff2) format("woff2"), url(/_assets/6f612b80df1b95abf7ca72717f8659d4.woff) format("woff"), url(/_assets/3daf0eaec12778787d91f136f84bbf72.ttf) format("truetype"), url(/_assets/8b3c39c92337731eed918959d2abee5f.svg#materialdesigniconsregular) format("svg");
+  src: url(/assets/d5247f90f15e16a67b0bc907bbf34b41.eot);
+  src: url(/assets/d5247f90f15e16a67b0bc907bbf34b41.eot?#iefix&v=1.7.22) format("embedded-opentype"), url(/assets/85f0bd26d0491015858074f6dfa2f33e.woff2) format("woff2"), url(/assets/6f612b80df1b95abf7ca72717f8659d4.woff) format("woff"), url(/assets/3daf0eaec12778787d91f136f84bbf72.ttf) format("truetype"), url(/assets/8b3c39c92337731eed918959d2abee5f.svg#materialdesigniconsregular) format("svg");
   font-weight: normal;
   font-style: normal;
 }
