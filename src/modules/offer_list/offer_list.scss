@@ -1,16 +1,16 @@
 .offer-list {
   .md-list-item-inner {
     padding-top: 8px;
+    margin-bottom: 12px;
 
     div.md-list-item-text {
-      margin: 0px;
       h3.md-headline {
         font-weight: 500;
       }
+      h3.price {
+        padding-right: 0px;
+        font-size:16px
+      }
     }
   }
-}
-
-p.price {
-  padding-right: 15px;
 }
