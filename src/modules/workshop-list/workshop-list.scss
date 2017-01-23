@@ -25,3 +25,9 @@
     font-size: 12px;
   }
 }
+
+.md-toolbar-tools {
+  &.md-accent {
+    background-color: #4a638f;
+  }
+}

@@ -1,6 +1,7 @@
 // Imports
 import UserRoles from '../../core/auth/constants/userRoles';
 import WorkshopListController from './workshop-list.controller';
+import WorkshopListHeaderController from './workshop-list-header.controller';
 import { workshops } from './workshop-list.resolve';
 
 /**
@@ -24,6 +25,11 @@ export default function routing(RouterHelper) {
           resolve: {
             _workshops: workshops,
           },
+        },
+        'header@': {
+          template: require('./partials/header.html'),
+          controller: WorkshopListHeaderController,
+          controllerAs: 'vm',
         },
       },
     },
