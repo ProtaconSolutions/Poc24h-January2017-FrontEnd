@@ -1,45 +1,38 @@
 <md-content class="workshop" flex>
     <md-content class="md-padding main-icon-container" layout="row" layout-align="space-around center">
-        <div>
-            <md-button class="md-primary" aria-label="Soita" layout="column" layout-align="center center">
-                <md-icon>phone</md-icon>
+        <md-button class="md-primary" aria-label="Soita" layout="column" layout-align="center center" data-ng-href="tel: +{{ ::vm.workshop.phone }}">
+            <md-icon>phone</md-icon>
 
-                <span>Soita</span>
-            </md-button>
+            <span>Soita</span>
+        </md-button>
 
-        </div>
+        <md-button class="md-primary" aria-label="Ota yhteyttä" layout="column" layout-align="center center">
+            <md-icon>perm_contact_calendar</md-icon>
 
-        <div>
-            <md-button class="md-primary" aria-label="Ota yhteyttä" layout="column" layout-align="center center">
-                <md-icon>perm_contact_calendar</md-icon>
+            <span>Ota yhteyttä</span>
+        </md-button>
 
-                <span>Ota yhteyttä</span>
-            </md-button>
-        </div>
+        <md-button class="md-primary" aria-label="Navigoi" layout="column" layout-align="center center">
+            <md-icon>navigation</md-icon>
 
-        <div>
-            <md-button class="md-primary" aria-label="Navigoi" layout="column" layout-align="center center">
-                <md-icon>navigation</md-icon>
-
-                <span>Navigoi</span>
-            </md-button>
-        </div>
+            <span>Navigoi</span>
+        </md-button>
     </md-content>
 
     <md-divider></md-divider>
 
     <md-content class="md-padding">
         <md-list>
-            <md-list-item>
+            <md-list-item class="md-padding md-no-proxy">
                 <md-icon class="md-primary">phone</md-icon>
 
-                <p>{{ ::vm.workshop.phone | phoneNumber }}</p>
+                <md-button data-ng-href="tel: +{{ ::vm.workshop.phone }}">{{ ::vm.workshop.phone | phoneNumber }}</md-button>
             </md-list-item>
 
-            <md-list-item>
+            <md-list-item class="md-padding md-no-proxy">
                 <md-icon class="md-primary">email</md-icon>
 
-                <p><a href="mailto: {{ ::vm.workshop.email }}">{{ ::vm.workshop.email }}</a></p>
+                <md-button data-ng-href="mailto: {{ ::vm.workshop.email }}">{{ ::vm.workshop.email }}</md-button>
             </md-list-item>
 
             <md-list-item>
@@ -50,8 +43,10 @@
         </md-list>
     </md-content>
 
-    <md-content class="md-padding no-padding-top">
-        <md-content class="md-padding no-padding-top">
+    <md-divider></md-divider>
+
+    <md-content class="md-padding">
+        <md-content class="md-padding">
             <h4 class="md-subhead no-margin-top no-margin-bottom">Kuvaus</h4>
 
             <p class="md-body-1">Lorem ipsum dolor</p>
