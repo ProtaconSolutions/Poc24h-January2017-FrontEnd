@@ -2,9 +2,9 @@
 export default (app) => {
   app.config(
     ($mdThemingProvider) => {
-      const baseColorMap = $mdThemingProvider.extendPalette('blue', {
+      const baseColorMap = $mdThemingProvider.extendPalette('indigo', {
         50: '#4a75cc',
-        100: '#3766c6',
+        100: '#C5CDDB',
         200: '#325cb2',
         300: '#2c529e',
         400: '#27478a',
@@ -14,18 +14,18 @@ export default (app) => {
         800: '#101e3a',
         900: '#0b1426',
         A100: '#5e84d2',
-        A200: '#7293d8',
+        A200: '#ffffff',
         A400: '#86a3dd',
         A700: '#050912',
         contrastDefaultColor: 'light',
       });
 
       // Register the new color palette map with the name <code>blue</code>
-      $mdThemingProvider.definePalette('blue', baseColorMap);
+      $mdThemingProvider.definePalette('indigo', baseColorMap);
 
      // Use that theme for the primary intentions
       $mdThemingProvider.theme('default')
-                        .primaryPalette('blue');
+                        .primaryPalette('indigo');
 
       return $mdThemingProvider;
     },

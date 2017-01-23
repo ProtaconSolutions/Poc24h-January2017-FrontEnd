@@ -1,6 +1,6 @@
 <md-content class="md-padding layout-padding" flex>
   <form name="vm.form" autocomplete="off" data-ng-submit="vm.submit()">
-    <md-input-container class="md-block" flex>
+    <md-input-container md-no-float="" class="md-block" flex>
       <label class="md-display-1">
         Valitse palvelu
       </label>
@@ -12,7 +12,7 @@
       </md-select>
     </md-input-container>
 
-    <md-input-container class="md-block" flex>
+    <md-input-container md-no-float="" class="md-block" flex>
       <label class="md-display-1">
         Valitse merkki
       </label>
@@ -24,7 +24,7 @@
       </md-select>
     </md-input-container>
 
-    <md-input-container class="md-block" flex>
+    <md-input-container md-no-float="" class="md-block" flex>
       <label class="md-display-1">
         Sijainti
       </label>
@@ -36,7 +36,7 @@
       </md-select>
     </md-input-container>
 
-    <md-input-container layout="column">
+    <md-input-container  md-no-float="" layout="column">
       <md-button type="submit" class="md-raised md-primary"
         data-ng-disabled="!vm.form.$valid"
       >ETSI</md-button>
