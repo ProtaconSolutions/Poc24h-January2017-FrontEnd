@@ -2,9 +2,14 @@ export default () => {};
 
 /**
  * @ngInject
+ * @param {OfferResource} OfferResource
  * @returns {Promise.<OfferInterface[]>|*}
  */
-export function offers() {
-  // TODO Get real data
-  return [];
+export function offers(OfferResource) {
+  return OfferResource
+    .query({
+      order: 'name',
+    })
+    .$promise
+  ;
 }
