@@ -14,6 +14,7 @@ export default angular
   .module('app.modules', [
     about,
     home,
+    workshopList,
     offerList,
   ])
   .run(routes)
