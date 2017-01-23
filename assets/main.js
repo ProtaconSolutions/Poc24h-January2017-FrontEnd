@@ -4345,7 +4345,7 @@ webpackJsonp([0],[
 	/* global API_URL, VERSION */
 	exports.default = function (app) {
 	  app.constant('config', {
-	    API_URL: ("http://poc-01.protacon.fi//"),
+	    API_URL: ("http://poc-01.protacon.fi/"),
 	    VERSION: ("0.0.0")
 	  });
 	};
