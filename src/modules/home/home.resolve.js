@@ -27,3 +27,10 @@ export function carBrands(CarBrandResource) {
     .$promise
   ;
 }
+
+export function cities(WorkshopResource) {
+  return WorkshopResource
+    .getCities()
+    .$promise
+  ;
+}

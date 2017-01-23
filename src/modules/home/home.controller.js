@@ -7,14 +7,16 @@ export default class HomeController {
    *
    * @param {ServiceTypeInterface[]} _serviceTypes
    * @param {CarBrandInterface[]} _carBrands
+   * @param {CityInterface[]} _cities
    */
-  constructor(_serviceTypes, _carBrands) {
+  constructor(_serviceTypes, _carBrands, _cities) {
     this.serviceType = null;
     this.carBrand = null;
-    this.location = '';
+    this.city = null;
 
     // Store resolved items
     this.serviceTypes = _serviceTypes;
     this.carBrands = _carBrands;
+    this.cities = _cities;
   }
 }

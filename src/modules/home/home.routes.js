@@ -1,7 +1,7 @@
 // Imports
 import HomeController from './home.controller';
 import UserRoles from '../../core/auth/constants/userRoles';
-import { serviceTypes, carBrands } from './home.resolve';
+import { serviceTypes, carBrands, cities } from './home.resolve';
 
 /**
  * @ngInject
@@ -24,6 +24,7 @@ export default function routing(RouterHelper) {
           resolve: {
             _serviceTypes: serviceTypes,
             _carBrands: carBrands,
+            _cities: cities,
           },
         },
       },
