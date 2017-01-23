@@ -1,14 +1,17 @@
 <md-content class="md-padding no-padding-top" flex>
-    <md-list>
+    <md-list flex>
+        <md-subheader class="md-no-sticky">{{ ::vm.offers.length | number }} tarjousta</md-subheader>
+
         <md-list-item class="md-3-line" ng-repeat="offer in vm.offers">
             <md-icon class="md-avatar-icon">donut_small</md-icon>
+
             <div class="md-list-item-text">
                 <div layout="row" layout-align="space-between center">
                     <h3>{{::offer.name}}</h3>
                     <p>{{::offer.price}}€</p>
                 </div>
                 <p>{{::offer.description}}</p>
-                <md-button class="md-secondary">Osta</md-button>
+                <md-button class="md-secondary md-raised">Osta</md-button>
             </div>
         </md-list-item>
     </md-list>
