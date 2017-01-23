@@ -16,7 +16,7 @@
       Valitse merkki
     </label>
 
-    <md-select data-ng-model="vm.serviceType">
+    <md-select data-ng-model="vm.carBrand">
       <md-option data-ng-value="carBrand.id" data-ng-repeat="carBrand in vm.carBrands">
         {{::carBrand.name}}
       </md-option>
@@ -34,5 +34,7 @@
     />
   </md-input-container>
 
-  <md-button>ETSI</md-button>
+  <md-input-container class="md-block" layout="column">
+    <md-button class="md-raised md-primary" flex>ETSI</md-button>
+  </md-input-container>
 </md-content>

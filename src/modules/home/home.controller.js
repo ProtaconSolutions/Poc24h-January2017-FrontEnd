@@ -5,19 +5,16 @@ export default class HomeController {
   /**
    * Constructor of the class.
    *
-   * @param {ServiceType[]} _serviceTypes
+   * @param {ServiceTypeInterface[]} _serviceTypes
+   * @param {CarBrandInterface[]} _carBrands
    */
-  constructor(_serviceTypes) {
+  constructor(_serviceTypes, _carBrands) {
     this.serviceType = null;
     this.carBrand = null;
     this.location = '';
 
+    // Store resolved items
     this.serviceTypes = _serviceTypes;
-
-    // TODO Get car brands
-    this.carBrands = [
-      { id: 1, name: 'Audi' },
-      { id: 2, name: 'Mazda' },
-    ];
+    this.carBrands = _carBrands;
   }
 }
