@@ -1,0 +1,17 @@
+<md-content class="workshop-list md-padding no-padding-top" flex>
+    <md-list flex>
+        <md-subheader class="md-no-sticky">{{ ::vm.workshops.length | number }} {{ ::vm.serviceType }}a</md-subheader>
+
+        <md-list-item class="md-3-line" data-ng-repeat="workshop in vm.workshops" data-ng-click="null">
+            <img data-ng-if="workshop.image" ng-src="{{ ::workshop.image }}" class="md-avatar" alt="{{ ::workshop.name }}" />
+
+            <md-icon class="md-avatar-icon" data-ng-if="!workshop.image">directions_car</md-icon>
+
+            <div class="md-list-item-text" layout="column">
+                <h3>{{ ::workshop.name }}</h3>
+                <h4>{{ ::workshop.address }}, {{ ::workshop.postalCode }} {{ ::workshop.city }}</h4>
+                <h4>Tähdet tähän + etäisyys</h4>
+            </div>
+        </md-list-item>
+    </md-list>
+</md-content>

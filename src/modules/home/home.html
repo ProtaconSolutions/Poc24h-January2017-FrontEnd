@@ -1,41 +1,45 @@
 <md-content class="md-padding no-padding-top" flex>
-  <md-input-container class="md-block" flex>
-    <label>
-      Valitse palvelu
-    </label>
+  <form name="vm.form" autocomplete="off" data-ng-submit="vm.submit()">
+    <md-input-container class="md-block" flex>
+      <label>
+        Valitse palvelu
+      </label>
 
-    <md-select data-ng-model="vm.serviceType">
-      <md-option data-ng-value="serviceType.id" data-ng-repeat="serviceType in vm.serviceTypes">
-        {{::serviceType.name}}
-      </md-option>
-    </md-select>
-  </md-input-container>
+      <md-select required="true" data-ng-model="vm.serviceType">
+        <md-option data-ng-value="serviceType" data-ng-repeat="serviceType in vm.serviceTypes">
+          {{::serviceType.name}}
+        </md-option>
+      </md-select>
+    </md-input-container>
 
-  <md-input-container class="md-block" flex>
-    <label>
-      Valitse merkki
-    </label>
+    <md-input-container class="md-block" flex>
+      <label>
+        Valitse merkki
+      </label>
 
-    <md-select data-ng-model="vm.carBrand">
-      <md-option data-ng-value="carBrand.id" data-ng-repeat="carBrand in vm.carBrands">
-        {{::carBrand.name}}
-      </md-option>
-    </md-select>
-  </md-input-container>
+      <md-select required="true" data-ng-model="vm.carBrand">
+        <md-option data-ng-value="carBrand" data-ng-repeat="carBrand in vm.carBrands">
+          {{::carBrand.name}}
+        </md-option>
+      </md-select>
+    </md-input-container>
 
-  <md-input-container class="md-block" flex>
-    <label>
-      Sijainti
-    </label>
+    <md-input-container class="md-block" flex>
+      <label>
+        Sijainti
+      </label>
 
-    <md-select data-ng-model="vm.city">
-      <md-option data-ng-value="city" data-ng-repeat="city in vm.cities">
-        {{::city}}
-      </md-option>
-    </md-select>
-  </md-input-container>
+      <md-select required="true" data-ng-model="vm.city">
+        <md-option data-ng-value="city" data-ng-repeat="city in vm.cities">
+          {{::city}}
+        </md-option>
+      </md-select>
+    </md-input-container>
 
-  <md-input-container class="md-block" layout="column">
-    <md-button class="md-raised md-primary" flex>ETSI</md-button>
-  </md-input-container>
+    <md-input-container layout="column">
+      <md-button type="submit" class="md-raised md-primary" flex
+        data-ng-disabled="!vm.form.$valid"
+      >ETSI</md-button>
+    </md-input-container>
+  </form>
 </md-content>
