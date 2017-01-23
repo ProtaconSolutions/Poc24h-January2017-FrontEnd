@@ -23,9 +23,18 @@ export default (app) => {
       // Register the new color palette map with the name <code>blue</code>
       $mdThemingProvider.definePalette('indigo', baseColorMap);
 
-     // Use that theme for the primary intentions
+      const accentColorMap = $mdThemingProvider.extendPalette('indigo', {
+        A200: '#ffffff',
+        contrastDefaultColor: 'light',
+      });
+
+      // Register the new color palette map with the name <code>blue</code>
+      $mdThemingProvider.definePalette('indigo', accentColorMap);
+
+      // Use that theme for the primary intentions
       $mdThemingProvider.theme('default')
-                        .primaryPalette('indigo');
+                        .primaryPalette('indigo')
+                        .accentPalette('indigo');
 
       return $mdThemingProvider;
     },
