@@ -12,6 +12,11 @@ export default class WorkshopListHeaderController {
   }
 
   back() {
-    this.state.go('modules.home', this.stateParams);
+    this.state.go(
+      'modules.home',
+      {
+        selected: this.stateParams,
+      },
+    );
   }
 }

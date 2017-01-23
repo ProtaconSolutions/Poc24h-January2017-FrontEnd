@@ -11,13 +11,13 @@ export default class HomeController {
    * @param {CityInterface[]}         _cities
    */
   constructor(
-    $state,
+    $state, $stateParams,
     _serviceTypes, _carBrands, _cities,
   ) {
     this.state = $state;
-    this.serviceType = null;
-    this.carBrand = null;
-    this.city = null;
+    this.serviceType = $stateParams.selected ? $stateParams.selected.serviceType || null : null;
+    this.carBrand = $stateParams.selected ? $stateParams.selected.carBrand || null : null;
+    this.city = $stateParams.selected ? $stateParams.selected.city || null : null;
 
     // Store resolved items
     this.serviceTypes = _serviceTypes;
@@ -28,8 +28,8 @@ export default class HomeController {
   // Method to submit current form and relocate user to workshop list page
   submit() {
     const parameters = {
-      serviceType: this.serviceType.name,
-      carBrand: this.carBrand.name,
+      serviceType: this.serviceType,
+      carBrand: this.carBrand,
       city: this.city,
     };
 

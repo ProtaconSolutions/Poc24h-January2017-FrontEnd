@@ -6,7 +6,7 @@
       </label>
 
       <md-select required="true" data-ng-model="vm.serviceType">
-        <md-option data-ng-value="serviceType" data-ng-repeat="serviceType in vm.serviceTypes">
+        <md-option data-ng-value="serviceType.name" data-ng-repeat="serviceType in vm.serviceTypes">
           {{::serviceType.name}}
         </md-option>
       </md-select>
@@ -18,7 +18,7 @@
       </label>
 
       <md-select required="true" data-ng-model="vm.carBrand">
-        <md-option data-ng-value="carBrand" data-ng-repeat="carBrand in vm.carBrands">
+        <md-option data-ng-value="carBrand.name" data-ng-repeat="carBrand in vm.carBrands">
           {{::carBrand.name}}
         </md-option>
       </md-select>
@@ -37,7 +37,7 @@
     </md-input-container>
 
     <md-input-container layout="column">
-      <md-button type="submit" class="md-raised md-primary" flex
+      <md-button type="submit" class="md-raised md-primary"
         data-ng-disabled="!vm.form.$valid"
       >ETSI</md-button>
     </md-input-container>

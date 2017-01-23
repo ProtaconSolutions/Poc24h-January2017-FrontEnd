@@ -4,7 +4,7 @@
             <md-icon>arrow_back</md-icon>
         </md-button>
 
-        <span>Korjaamot</span>
+        <span>{{ ::vm.stateParams.serviceType }}t</span>
     </div>
 
     <div class="md-toolbar-tools md-accent">
@@ -14,8 +14,8 @@
 
         <span>{{ ::vm.stateParams.carBrand }}, {{ ::vm.stateParams.city }}</span>
     </div>
-    
-    <md-tabs md-dynamic-height md-border-bottom md-stretch-tabs="always">
+
+    <md-tabs md-dynamic-height md-stretch-tabs="always">
         <md-tab label="Etäisyys" data-ng-click="vm.sharedData.order = 'distance'">
         </md-tab>
 

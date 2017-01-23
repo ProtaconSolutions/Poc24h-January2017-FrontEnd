@@ -15,6 +15,9 @@ export default function routing(RouterHelper) {
     config: {
       url: '/',
       title: 'Palvelut',
+      params: {
+        selected: null,
+      },
       data: {
         access: UserRoles.ROLE_ANON,
       },
