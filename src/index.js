@@ -18,6 +18,7 @@ import resources from './resources/resource.module';
 import services from './services/services.module';
 
 import appConfiguration from './app.config';
+import appTheme from './app.theme';
 
 const app = angular.module('app', [
   dependencies,
@@ -26,8 +27,10 @@ const app = angular.module('app', [
   modules,
   resources,
   services,
+  'ngMaterial',
 ]);
 
 appConfiguration(app);
+appTheme(app);
 
 angular.bootstrap(document.documentElement, ['app']);
