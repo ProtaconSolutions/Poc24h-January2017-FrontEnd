@@ -8,10 +8,11 @@
             <div class="md-list-item-text">
                 <div layout="row" layout-align="space-between center">
                     <h3>{{::offer.name}}</h3>
-                    <p>{{::offer.price}}€</p>
+                    <p class="price">{{::offer.price}}€</p>
                 </div>
                 <p>{{::offer.description}}</p>
-                <md-button class="md-secondary md-raised">Osta</md-button>
+
+                <md-icon class="md-secondary" aria-label="Osta">shopping_cart</md-icon>
             </div>
         </md-list-item>
     </md-list>
