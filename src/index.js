@@ -14,6 +14,7 @@ import './index.scss';
 // Application modules
 import core from './core/core.module';
 import dependencies from './dependencies/dependencies.module';
+import filters from './filters/filters.module';
 import layout from './layout/layout.module';
 import modules from './modules/modules.module';
 import resources from './resources/resource.module';
@@ -26,6 +27,7 @@ const app = angular.module('app', [
   dependencies,
   core,
   layout,
+  filters,
   modules,
   resources,
   services,
