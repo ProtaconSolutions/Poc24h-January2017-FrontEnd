@@ -1,6 +1,6 @@
 .workshop-list {
   .angular-rating-icons {
-    margin: 0;
+    margin: -11px 0 0 0;
   }
 
   md-list-item .md-avatar-icon,
@@ -14,12 +14,12 @@
     md-icon {
       position: relative;
       top: -4px;
-      font-size: 24px;
+      font-size: 16px;
     }
 
     span {
       position: relative;
-      top: -2px;
+      top: -7px;
     }
 
     font-size: 12px;
