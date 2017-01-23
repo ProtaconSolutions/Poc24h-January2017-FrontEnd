@@ -3,6 +3,17 @@
     margin: -11px 0 0 0;
   }
 
+  .md-list-item-inner {
+    padding-top:8px;
+
+    div.md-list-item-text {
+      margin:0px;
+      h3.md-headline {
+        font-weight:500;
+      }
+    }
+  }
+
   md-list-item .md-avatar-icon,
   md-list-item .md-list-item-inner .md-avatar-icon {
     margin-top: 0;

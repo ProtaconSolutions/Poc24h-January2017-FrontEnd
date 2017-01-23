@@ -1,4 +1,4 @@
-<md-content class="md-padding no-padding-top" flex>
+<md-content class="offer-list md-padding no-padding-top" flex>
     <md-list flex>
         <md-subheader class="md-no-sticky">{{ ::vm.offers.length | number }} tarjousta</md-subheader>
 
@@ -7,7 +7,7 @@
 
             <div class="md-list-item-text">
                 <div layout="row" layout-align="space-between center">
-                    <h3>{{::offer.name}}</h3>
+                    <h3 class="md-headline">{{::offer.name}}</h3>
                     <p class="price">{{::offer.price}}€</p>
                 </div>
                 <p>{{::offer.description}}</p>
