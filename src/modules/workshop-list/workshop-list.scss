@@ -1,2 +1,27 @@
 .workshop-list {
+  .angular-rating-icons {
+    margin: 0;
+  }
+
+  md-list-item .md-avatar-icon,
+  md-list-item .md-list-item-inner .md-avatar-icon {
+    margin-top: 0;
+  }
+
+  .location {
+    margin-left: 16px;
+
+    md-icon {
+      position: relative;
+      top: -4px;
+      font-size: 24px;
+    }
+
+    span {
+      position: relative;
+      top: -2px;
+    }
+
+    font-size: 12px;
+  }
 }

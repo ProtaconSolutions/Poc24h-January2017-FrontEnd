@@ -5,6 +5,8 @@ import 'angular/angular-csp.css';
 import 'angular-material/angular-material.css';
 import 'mdi/css/materialdesignicons.css';
 import 'angular-loading-bar/build/loading-bar.css';
+import 'angular-rating-icons/dist/angular-rating-icons.min.css';
+import 'font-awesome/css/font-awesome.min.css';
 
 // Main SCSS file for application
 import './index.scss';

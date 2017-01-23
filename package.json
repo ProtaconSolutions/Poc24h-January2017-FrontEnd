@@ -32,9 +32,11 @@
     "angular-jwt": "0.1.8",
     "angular-loading-bar": "0.9.0",
     "angular-material": "1.1.1",
+    "angular-rating-icons": "1.0.3",
     "angular-resource": "1.6.1",
     "angular-sanitize": "1.6.1",
     "angular-ui-router": "0.3.2",
+    "font-awesome": "4.7.0",
     "lodash": "4.17.4",
     "mdi": "1.7.22",
     "ngstorage": "0.3.11"

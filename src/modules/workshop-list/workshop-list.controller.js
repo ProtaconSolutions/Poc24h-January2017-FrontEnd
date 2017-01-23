@@ -15,6 +15,7 @@ export default class WorkshopListController {
     this.serviceType = $stateParams.serviceType;
     this.carBrand = $stateParams.carBrand;
     this.city = $stateParams.city;
+    this.rating = 3;
 
     this.workshops = _workshops;
   }

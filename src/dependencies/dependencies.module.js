@@ -9,6 +9,7 @@ import angularSanitize from 'angular-sanitize';
 import ngResource from 'angular-resource';
 import ngstorage from 'ngstorage';
 import uiRouter from 'angular-ui-router';
+import 'angular-rating-icons';
 
 import config from './dependencies.config';
 
@@ -20,6 +21,7 @@ export default angular
     angularAnimate, angularAria, angularJWT, angularLoadingBar, angularMaterial, angularSanitize,
     ngResource,
     ngstorage.name, // see https://github.com/gsklee/ngStorage/pull/159
+    'angular-rating-icons',
     uiRouter,
   ])
   .config(config)

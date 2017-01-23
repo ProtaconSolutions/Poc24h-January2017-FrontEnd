@@ -10,8 +10,33 @@
             <div class="md-list-item-text" layout="column">
                 <h3>{{ ::workshop.name }}</h3>
                 <h4>{{ ::workshop.address }}, {{ ::workshop.postalCode }} {{ ::workshop.city }}</h4>
-                <h4>Tähdet tähän + etäisyys</h4>
+                <div layout="row" layout-align="start center">
+                    <div
+                        data-angular-rating-icons
+                        data-ng-model='vm.rating'
+                        data-max=10
+                        data-icon-empty="fa-star-o"
+                        data-icon-full="fa-star"
+                        data-icon-hover="fa-star"
+                        data-color-base="orange"
+                        data-color-selected="orange"
+                        data-color-hover="orange"
+                        data-icon-size="20"
+                        data-icon-spacing="2"
+                        data-read-only="true"
+                        data-decimal
+                    ></div>
+
+                    <div class="location">
+                        <md-icon class="md-primary">location_on</md-icon>
+
+                        <span>
+                            {{ ::workshop.distance | number: 1}}km
+                        </span>
+                    </div>
+                </div>
             </div>
         </md-list-item>
     </md-list>
+
 </md-content>
