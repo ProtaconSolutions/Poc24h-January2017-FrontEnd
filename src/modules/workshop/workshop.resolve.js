@@ -11,8 +11,8 @@ export function workshop(
   WorkshopResource,
 ) {
   return WorkshopResource
-    .query({
-      id: $stateParams.guid,
+    .get({
+      id: $stateParams.id,
     })
     .$promise
   ;

@@ -1,1 +1,24 @@
+.workshop {
+  .main-icon-container {
+    padding-top: 16px;
 
+    md-icon {
+      min-height: 32px;
+      max-height: 32px;
+      font-size: 32px;
+    }
+
+    md-button {
+      padding-top: 8px;
+    }
+  }
+
+  md-list-item {
+    min-height: 40px;
+    max-height: 40px;
+  }
+
+  md-list-item > md-icon:first-child:not(.md-avatar-icon) {
+    margin: 0 16px 0 0;
+  }
+}

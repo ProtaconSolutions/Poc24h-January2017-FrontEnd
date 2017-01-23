@@ -14,6 +14,7 @@ export default function routing(RouterHelper) {
       url: '/korjaamot/:id',
       title: 'Korjaamo',
       params: {
+        id: null,
         selected: null,
       },
       data: {
