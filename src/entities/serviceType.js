@@ -1,5 +1,5 @@
 /**
- * MenuItem class.
+ * ServiceType class.
  *
  * @ngInject
  */
