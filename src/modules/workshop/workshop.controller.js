@@ -8,11 +8,10 @@ export default class WorkshopController {
    * @param {WorkshopInterface} _workshop
    */
   constructor(
-    $stateParams,
     _workshop,
   ) {
     this.workshop = _workshop;
 
-    console.log($stateParams);
+    this.emails = this.workshop.email.split(',').map(email => email.trim());
   }
 }

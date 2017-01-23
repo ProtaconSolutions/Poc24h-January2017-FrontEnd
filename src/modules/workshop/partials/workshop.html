@@ -29,10 +29,10 @@
                 <md-button data-ng-href="tel: +{{ ::vm.workshop.phone }}">{{ ::vm.workshop.phone | phoneNumber }}</md-button>
             </md-list-item>
 
-            <md-list-item class="md-padding md-no-proxy">
+            <md-list-item class="md-padding md-no-proxy" data-ng-repeat="email in vm.emails | orderBy: 'toString()'">
                 <md-icon class="md-primary">email</md-icon>
 
-                <md-button data-ng-href="mailto: {{ ::vm.workshop.email }}">{{ ::vm.workshop.email }}</md-button>
+                <md-button data-ng-href="mailto: {{ ::email }}">{{ ::email }}</md-button>
             </md-list-item>
 
             <md-list-item>
