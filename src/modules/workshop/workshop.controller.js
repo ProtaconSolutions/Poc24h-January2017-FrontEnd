@@ -32,7 +32,7 @@ export default class WorkshopController {
       licensePlateNumber: '',
       phone: '',
       email: '',
-    }
+    };
   }
 
   // Change view action to contact form
@@ -44,7 +44,7 @@ export default class WorkshopController {
       licensePlateNumber: '',
       phone: '',
       email: '',
-    }
+    };
   }
 
   // Submit contact form
