@@ -7,8 +7,17 @@ export default class OfferListController {
    *
    * @param {OfferInterface[]} _offers
    */
-  constructor(_offers) {
+  constructor($stateParams, $state, _offers) {
+    this.state = $state;
     // Store resolved items
     this.offers = _offers;
+  }
+
+  openOffer(offer) {
+    const parameters = {
+      id: offer.id,
+    };
+
+    this.state.go('modules.offer', parameters);
   }
 }
