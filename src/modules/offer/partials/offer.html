@@ -1,15 +1,17 @@
-<md-content class="offer md-padding" flex  layout-fill layout="column" layout-align="space-between none">
+<md-content class="offer md-padding" flex>
     <div class="loading" data-ng-if="vm.loading">
         <md-progress-circular md-mode="indeterminate" md-diameter="96"></md-progress-circular>
     </div>
-        <md-input-container class="no-margin"  layout="column"
-                            data-ng-class="vm.loading ? 'opacity-50' : ''">
-            <small class="md-caption">Kuvaus</small>
-            <h3 class="no-margin-top md-body-2">{{::vm.offer.description}}</h3>
-        </md-input-container>
+    <div data-ng-class="vm.loading ? 'opacity-50' : ''"  flex  layout-fill layout="column" layout-align="space-between none">
+        <div>
+            <h4 class="md-subhead no-margin-top no-margin-bottom">Kuvaus</h4>
 
-        <md-input-container class="no-margin" layout="column"
-                            data-ng-class="vm.loading ? 'opacity-50' : ''">
+            <p class="md-body-1 no-margin-top">
+                {{::vm.offer.description}}
+            </p>
+        </div>
+
+        <md-input-container class="no-margin" layout="column">
             <md-button type="submit" class="md-raised md-primary" data-ng-click="vm.submit()">Osta</md-button>
         </md-input-container>
     </div>
