@@ -57,6 +57,14 @@
 }
 
 .form-container {
+  .loading {
+    position: absolute;
+    left: 50%;
+    margin-left: -48px;
+    margin-top: 48px;
+    z-index: 100;
+  }
+
   .md-subheader,
   .md-title {
     margin: 4px 0;

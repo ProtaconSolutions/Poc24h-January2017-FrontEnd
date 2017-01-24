@@ -71,7 +71,14 @@
     </div>
     <div layout-fill flex data-ng-if="vm.sharedData.action === 'contact'">
         <md-content class="md-padding form-container" layout-fill flex>
-            <form name="vm.form" name="vm.form" autocomplete="off" layout="column" layout-align="space-between stretch" layout-fill data-ng-submit="vm.submit()">
+
+            <div class="loading" data-ng-if="vm.loading">
+                <md-progress-circular md-mode="indeterminate" md-diameter="96"></md-progress-circular>
+            </div>
+
+            <form name="vm.form" name="vm.form" autocomplete="off" layout="column" layout-align="space-between stretch" layout-fill data-ng-submit="vm.submit()"
+                data-ng-class="vm.loading ? 'opacity-50' : ''"
+            >
                 <h4 class="md-title">Täytä yhteystietosi</h4>
 
                 <div>
