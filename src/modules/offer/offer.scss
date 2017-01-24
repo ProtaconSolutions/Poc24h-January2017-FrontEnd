@@ -30,6 +30,14 @@
       margin: 0 -6px;
     }
   }
+
+  .loading {
+    position: absolute;
+    left: 50%;
+    margin-left: -48px;
+    margin-top: 48px;
+    z-index: 100;
+  }
 }
 
 .offer-header {
@@ -47,13 +55,6 @@
 }
 
 .form-container {
-  .loading {
-    position: absolute;
-    left: 50%;
-    margin-left: -48px;
-    margin-top: 48px;
-    z-index: 100;
-  }
 
   .md-subheader,
   .md-title {
