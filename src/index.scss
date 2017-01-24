@@ -59,6 +59,14 @@ html {
   cursor: pointer;
 }
 
+.white {
+  color: white;
+
+  md-icon {
+    color: white;
+  }
+}
+
 /** lists */
 md-list .md-subheader {
   font-size: 24px;
@@ -70,18 +78,21 @@ md-list .md-subheader {
 
 md-input-container{
   .md-button, &.md-block {
-    height:65px;
-    margin-left:30px;
-    margin-right:30px;
+    height:55px;
+    margin-left:24px;
+    margin-right:24px;
   }
 
   &.md-block{
-    margin-top: 40px;
+    margin-top: 32px;
   }
 
   .md-button {
     font-size:18px;
   }
 
+}
+.home form{
+  height:100%;
 }
 

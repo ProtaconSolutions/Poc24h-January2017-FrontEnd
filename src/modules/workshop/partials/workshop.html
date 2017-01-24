@@ -1,59 +1,121 @@
 <md-content class="workshop" flex>
-    <md-content class="md-padding main-icon-container" layout="row" layout-align="space-around center">
-        <md-button class="md-primary" aria-label="Soita" layout="column" layout-align="center center" data-ng-href="tel: +{{ ::vm.workshop.phone }}">
-            <md-icon>phone</md-icon>
+    <div data-ng-if="vm.sharedData.action === 'information'">
+        <md-content class="md-padding main-icon-container" layout="row" layout-align="space-around center">
+            <md-button class="md-primary" aria-label="Soita" layout="column" layout-align="center center" data-ng-href="tel: +{{ ::vm.workshop.phone }}">
+                <md-icon>phone</md-icon>
 
-            <span>Soita</span>
-        </md-button>
+                <span>Soita</span>
+            </md-button>
 
-        <md-button class="md-primary" aria-label="Ota yhteyttä" layout="column" layout-align="center center">
-            <md-icon>perm_contact_calendar</md-icon>
+            <md-button class="md-primary" aria-label="Ota yhteyttä" layout="column" layout-align="center center" data-ng-click="vm.contact()">
+                <md-icon>perm_contact_calendar</md-icon>
 
-            <span>Ota yhteyttä</span>
-        </md-button>
+                <span>Ota yhteyttä</span>
+            </md-button>
 
-        <md-button class="md-primary" aria-label="Navigoi" layout="column" layout-align="center center">
-            <md-icon>navigation</md-icon>
+            <md-button class="md-primary" aria-label="Navigoi" layout="column" layout-align="center center">
+                <md-icon>navigation</md-icon>
 
-            <span>Navigoi</span>
-        </md-button>
-    </md-content>
-
-    <md-divider></md-divider>
-
-    <md-content class="md-padding">
-        <md-list>
-            <md-list-item class="md-padding md-no-proxy">
-                <md-icon class="md-primary">phone</md-icon>
-
-                <md-button data-ng-href="tel: +{{ ::vm.workshop.phone }}">{{ ::vm.workshop.phone | phoneNumber }}</md-button>
-            </md-list-item>
-
-            <md-list-item class="md-padding md-no-proxy" data-ng-repeat="email in vm.emails | orderBy: 'toString()'">
-                <md-icon class="md-primary">email</md-icon>
-
-                <md-button data-ng-href="mailto: {{ ::email }}">{{ ::email }}</md-button>
-            </md-list-item>
-
-            <md-list-item>
-                <md-icon class="md-primary">access_time</md-icon>
-
-                <p>Avoinna tänään 08:00 - 17:00</p>
-            </md-list-item>
-        </md-list>
-    </md-content>
-
-    <md-divider></md-divider>
-
-    <md-content class="md-padding">
-        <md-content class="md-padding">
-            <h4 class="md-subhead no-margin-top no-margin-bottom">Kuvaus</h4>
-
-            <p class="md-body-1">Lorem ipsum dolor</p>
-
-            <h4 class="md-subhead no-margin-top no-margin-bottom">Huoltaa merkkejä</h4>
-
-            <p class="md-body-1">Lorem ipsum dolor</p>
+                <span>Navigoi</span>
+            </md-button>
         </md-content>
-    </md-content>
+
+        <md-divider></md-divider>
+
+        <md-content class="md-padding">
+            <md-list>
+                <md-list-item class="md-padding md-no-proxy">
+                    <md-icon class="md-primary">phone</md-icon>
+
+                    <md-button data-ng-href="tel: +{{ ::vm.workshop.phone }}">{{ ::vm.workshop.phone | phoneNumber }}</md-button>
+                </md-list-item>
+
+                <md-list-item class="md-padding md-no-proxy" data-ng-repeat="email in vm.emails | orderBy: 'toString()'">
+                    <md-icon class="md-primary">email</md-icon>
+
+                    <md-button data-ng-href="mailto: {{ ::email }}">{{ ::email }}</md-button>
+                </md-list-item>
+
+                <md-list-item>
+                    <md-icon class="md-primary">access_time</md-icon>
+
+                    <p>Avoinna tänään 08:00 - 17:00</p>
+                </md-list-item>
+            </md-list>
+        </md-content>
+
+        <md-divider></md-divider>
+
+        <md-content class="md-padding">
+            <md-content class="md-padding">
+                <h4 class="md-subhead no-margin-top no-margin-bottom">Kuvaus</h4>
+
+                <p class="md-body-1 no-margin-top">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet velit ex.
+                    Mauris eget luctus tellus. Sed gravida mauris vel augue auctor, non rutrum tellus imperdiet.
+                    Phasellus porta nisi at nisl hendrerit posuere. In sed ante elementum, dignissim lorem ut,
+                    pulvinar augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia
+                    Curae; Ut purus ipsum, molestie vitae ligula sed, convallis pellentesque ligula. Integer
+                    dignissim in arcu in porta.
+                </p>
+
+                <h4 class="md-subhead no-margin-top no-margin-bottom">Huoltaa merkkejä</h4>
+
+                <md-chips ng-model="vm.carBrands" name="carBrand" readonly="true">
+                    <md-chip-template>
+                        <small>{{$chip}}</small>
+                    </md-chip-template>
+                </md-chips>
+            </md-content>
+        </md-content>
+    </div>
+    <div layout-fill flex data-ng-if="vm.sharedData.action === 'contact'">
+        <md-content class="md-padding form-container" layout-fill flex>
+
+            <div class="loading" data-ng-if="vm.loading">
+                <md-progress-circular md-mode="indeterminate" md-diameter="96"></md-progress-circular>
+            </div>
+
+            <form name="vm.form" name="vm.form" autocomplete="off" layout="column" layout-align="space-between stretch" layout-fill data-ng-submit="vm.submit()"
+                data-ng-class="vm.loading ? 'opacity-50' : ''"
+            >
+                <h4 class="md-title">Täytä yhteystietosi</h4>
+
+                <div>
+                    <h4 class="md-subheader">Haluan että minuun otetaan yhteyttä</h4>
+
+                    <md-input-container md-no-float class="md-block">
+                        <md-radio-group ng-model="vm.data.contactType" layout="row" layout-align="start center">
+                            <md-radio-button value="sähköposti" class="md-primary">Sähköpostitse</md-radio-button>
+                            <md-radio-button value="puhelin" class="md-primary">Puhelimitse</md-radio-button>
+                        </md-radio-group>
+                    </md-input-container>
+
+                    <md-input-container md-no-float class="md-block">
+                        <md-icon class="md-primary">directions_car</md-icon>
+                        <label>Rekisterinumero</label>
+                        <input data-ng-model="vm.data.licensePlateNumber" type="text" placeholder="ABC-123" required />
+                    </md-input-container>
+
+                    <md-input-container md-no-float class="md-block">
+                        <md-icon class="md-primary">phone</md-icon>
+                        <label>Puhelin</label>
+                        <input data-ng-model="vm.data.phone" type="text" placeholder="" required />
+                    </md-input-container>
+
+                    <md-input-container md-no-float class="md-block">
+                        <md-icon class="md-primary">email</md-icon>
+                        <label>Sähköposti</label>
+                        <input data-ng-model="vm.data.email" type="email" placeholder="" required />
+                    </md-input-container>
+                </div>
+
+                <md-input-container class="no-margin" layout="column">
+                    <md-button type="submit" class="md-raised md-primary"
+                        data-ng-disabled="!vm.form.$valid"
+                    >Lähetä</md-button>
+                </md-input-container>
+            </form>
+        </md-content>
+    </div>
 </md-content>
