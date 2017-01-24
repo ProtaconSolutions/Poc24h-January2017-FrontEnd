@@ -1,0 +1,15 @@
+<div class="md-whiteframe-z3">
+    <div class="offer-header" style="background-image: url({{vm.backgroundImage}});">
+        <md-button class="md-icon-button white" aria-label="Takaisin" ng-click="vm.back()">
+            <md-icon>arrow_back</md-icon>
+        </md-button>
+    </div>
+
+    <md-toolbar>
+        <div class="workshop-header-information" layout="column" layout-align="start stretch">
+            <h4>{{ vm.offer.name }}</h4>
+
+            <small>{{ vm.offer.price }} €</small>
+        </div>
+    </md-toolbar>
+</div>

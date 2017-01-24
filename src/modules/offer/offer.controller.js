@@ -7,15 +7,13 @@ export default class OfferController {
    *
    * @param {$timeout}                  $timeout
    * @param {LoggerService}             LoggerService
+   * @param {OfferInterface}         _offer
    */
-  constructor($timeout, LoggerService) {
+  constructor($timeout, LoggerService, _offer) {
     this.timeout = $timeout;
     this.logger = LoggerService;
     this.loading = false;
-
-    this.data = {
-      phone: '',
-    };
+    this.offer = _offer;
   }
 
   // Submit contact form
@@ -25,7 +23,6 @@ export default class OfferController {
     // Fake some data processing
     this.timeout(() => {
       this.logger.success('Ostettu');
-      this.sharedData.action = 'information';
       this.loading = false;
     }, 1500);
   }

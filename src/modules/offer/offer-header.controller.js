@@ -17,6 +17,6 @@ export default class OfferHeaderController {
   }
 
   back() {
-    this.state.go('modules.offer_list');
+    this.state.go('modules.offerList');
   }
 }
