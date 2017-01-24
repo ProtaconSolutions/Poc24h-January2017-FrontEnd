@@ -68,8 +68,8 @@ export default ($provide, $httpProvider, $logProvider, RouterHelperProvider, Exc
   }
 
   const config = {
-    APP_TITLE: 'angular-material-webpack-seed',
-    APP_ERROR_PREFIX: 'angular-material-webpack-seed - Error',
+    APP_TITLE: 'POC',
+    APP_ERROR_PREFIX: 'POC - Error',
   };
 
   // Configure router helper provider
