@@ -55,3 +55,30 @@
     }
   }
 }
+
+.form-container {
+  .md-subheader,
+  .md-title {
+    margin: 4px 0;
+  }
+
+  md-input-container {
+    &.md-block,
+    .md-button {
+      height: auto;
+      margin: 4px 0 0 0;
+
+      &:first-of-type {
+        margin-bottom: 20px;
+      }
+    }
+
+    .md-button {
+      height: 65px;
+    }
+  }
+
+  form {
+    padding: 0 8px;
+  }
+}
