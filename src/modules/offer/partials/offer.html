@@ -1,1 +1,9 @@
-offer
+<md-content class="offer md-padding" flex>
+    <small>Kuvaus</small>
+
+    <h3 class="md-body-1 no-margin-top md-headline">{{::vm.offer.description}}</h3>
+
+    <md-input-container class="no-margin" layout="column">
+        <md-button type="submit" class="md-raised md-primary" data-ng-click="vm.submit()">Osta</md-button>
+    </md-input-container>
+</md-content>
