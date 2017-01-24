@@ -1,0 +1,13 @@
+<md-toolbar class="md-whiteframe-z3">
+  <div class="md-toolbar-tools">
+    <a ng-href="/">KORJAAMO.NYT</a>
+  </div>
+
+  <md-tabs md-stretch-tabs="always">
+    <md-tab data-ng-repeat="tab in vm.tabs"
+            label="{{tab.label}}"
+            data-ng-click="vm.changeState(tab.state)"
+            md-active="vm.state.is(tab.state)"
+    ></md-tab>
+  </md-tabs>
+</md-toolbar>

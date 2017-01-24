@@ -1,0 +1,17 @@
+<md-content class="offer-list md-padding no-padding-top" flex>
+    <md-list flex>
+        <md-subheader class="md-no-sticky">{{ ::vm.offers.length | number }} tarjousta</md-subheader>
+
+        <md-list-item class="md-3-line" ng-repeat="offer in vm.offers" data-ng-click="null">
+            <md-icon class="md-avatar-icon">donut_small</md-icon>
+
+            <div class="md-list-item-text">
+                <div layout="row" layout-align="space-between center">
+                    <h3 class="md-headline">{{::offer.name}}</h3>
+                    <h3 class="price md-headline">{{::offer.price}}€</h3>
+                </div>
+                <p>{{::offer.description}}</p>
+            </div>
+        </md-list-item>
+    </md-list>
+</md-content>

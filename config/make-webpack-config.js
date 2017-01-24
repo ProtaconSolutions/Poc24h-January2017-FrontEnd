@@ -233,12 +233,12 @@ module.exports = function (options) {
           loaders: ['eslint'],
           include: path.join(__dirname, '..', 'src'),
         },
-        {
+        /*{
           test: /\.scss$/,
           loader: "scsslint",
           exclude: /node_modules/,
           include: path.join(__dirname, '..', 'src'),
-        }
+        }*/
       ],
       loaders: ignoreLoaders
         .concat(jsLoaders)

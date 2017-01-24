@@ -1,9 +1,9 @@
 # 24h POC
 
 [![License](http://img.shields.io/:license-mit-blue.svg)](LICENSE)
-[![GitHub version](https://badge.fury.io/gh/tarlepp%2Fangular-material-webpack-seed.svg)](https://badge.fury.io/gh/tarlepp%2Fangular-material-webpack-seed)
-[![Dependency Status](https://david-dm.org/tarlepp/angular-material-webpack-seed.svg)](https://david-dm.org/tarlepp/angular-material-webpack-seed)
-[![devDependency Status](https://david-dm.org/tarlepp/angular-material-webpack-seed/dev-status.svg)](https://david-dm.org/tarlepp/angular-material-webpack-seed#info=devDependencies)
+[![GitHub version](https://badge.fury.io/gh/ProtaconSolutions%2FPoc24h-January2017-FrontEnd.svg)](https://badge.fury.io/gh/tarlepp%2Fangular-material-webpack-seed)
+[![Dependency Status](https://david-dm.org/ProtaconSolutions/Poc24h-January2017-FrontEnd.svg)](https://david-dm.org/ProtaconSolutions/Poc24h-January2017-FrontEnd)
+[![devDependency Status](https://david-dm.org/ProtaconSolutions/Poc24h-January2017-FrontEnd/dev-status.svg)](https://david-dm.org/ProtaconSolutions/Poc24h-January2017-FrontEnd#info=devDependencies)
 
 Table of Contents
 =================
@@ -201,10 +201,12 @@ Application organisation rules:
 3. Controller should act as ViewModel, use $scope only if you need it
 4. All model layer (data fetching, business logic) should be in services
 
-# Author
-Tarmo Leppänen
+# Authors
+[Tarmo Leppänen](https://github.com/tarlepp)
+[Antti Nevala](https://github.com/aeosys)
+[Tuomo Moilanen](https://github.com/???)
 
-# License
+# LICENSE
 [The MIT License (MIT)](LICENSE)
 
-Copyright (c) 2016 Tarmo Leppänen
+Copyright (c) 2017 Protacon Solutions

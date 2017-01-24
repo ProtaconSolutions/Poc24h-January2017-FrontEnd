@@ -1,8 +1,6 @@
 // Imports
 import angular from 'angular';
-
-// CSS styles for sidenav
-import './sidenav.scss';
+import routes from './home.routes';
 
 /**
  * @desc  Module initialize.
@@ -10,5 +8,6 @@ import './sidenav.scss';
  * @ngInject
  */
 export default angular
-  .module('app.layout.sidenav', [])
+  .module('app.modules.home', [])
+  .run(routes)
   .name;

@@ -1,0 +1,45 @@
+<md-content class="md-padding layout-padding" flex>
+  <form name="vm.form" autocomplete="off" data-ng-submit="vm.submit()">
+    <md-input-container md-no-float="" class="md-block" flex>
+      <label class="md-headline">
+        Valitse palvelu
+      </label>
+
+      <md-select required="true" data-ng-model="vm.serviceType">
+        <md-option data-ng-value="serviceType.name" data-ng-repeat="serviceType in vm.serviceTypes">
+          {{::serviceType.name}}
+        </md-option>
+      </md-select>
+    </md-input-container>
+
+    <md-input-container md-no-float="" class="md-block" flex>
+      <label class="md-headline">
+        Valitse merkki
+      </label>
+
+      <md-select required="true" data-ng-model="vm.carBrand">
+        <md-option data-ng-value="carBrand.name" data-ng-repeat="carBrand in vm.carBrands">
+          {{::carBrand.name}}
+        </md-option>
+      </md-select>
+    </md-input-container>
+
+    <md-input-container md-no-float="" class="md-block" flex>
+      <label class="md-headline">
+        Sijainti
+      </label>
+
+      <md-select required="true" data-ng-model="vm.city">
+        <md-option data-ng-value="city" data-ng-repeat="city in vm.cities | orderBy: 'toString()'">
+          {{::city}}
+        </md-option>
+      </md-select>
+    </md-input-container>
+
+    <md-input-container  md-no-float="" layout="column">
+      <md-button type="submit" class="md-raised md-primary"
+        data-ng-disabled="!vm.form.$valid"
+      >ETSI</md-button>
+    </md-input-container>
+  </form>
+</md-content>

@@ -1,0 +1,25 @@
+<md-toolbar class="md-whiteframe-z3">
+    <div class="md-toolbar-tools" layout="row" layout-align="start center">
+        <md-button class="md-icon-button white" aria-label="Takaisin" ng-click="vm.back()">
+            <md-icon>arrow_back</md-icon>
+        </md-button>
+
+        <span>{{ ::vm.stateParams.serviceType }}t</span>
+    </div>
+
+    <div class="md-toolbar-tools md-accent">
+        <md-button class="md-icon-button white" aria-label="Takaisin" ng-disabled="true">
+            <md-icon>filter_list</md-icon>
+        </md-button>
+
+        <span>{{ ::vm.stateParams.carBrand }}, {{ ::vm.stateParams.city }}</span>
+    </div>
+
+    <md-tabs md-dynamic-height md-stretch-tabs="always">
+        <md-tab label="Etäisyys" data-ng-click="vm.sharedData.order = 'distance'">
+        </md-tab>
+
+        <md-tab label="Arviot" data-ng-click="vm.sharedData.order = '-rating'">
+        </md-tab>
+    </md-tabs>
+</md-toolbar>

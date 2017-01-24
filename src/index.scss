@@ -1,4 +1,7 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic);
+
 html {
+  font-family: Roboto, sans-serif;
   overflow: hidden;
 }
 
@@ -55,3 +58,30 @@ html {
 .cursor-pointer {
   cursor: pointer;
 }
+
+/** lists */
+md-list .md-subheader {
+  font-size: 24px;
+}
+
+.md-subheader .md-subheader-inner {
+  padding-bottom: 0;
+}
+
+md-input-container{
+  .md-button, &.md-block {
+    height:65px;
+    margin-left:30px;
+    margin-right:30px;
+  }
+
+  &.md-block{
+    margin-top: 40px;
+  }
+
+  .md-button {
+    font-size:18px;
+  }
+
+}
+
