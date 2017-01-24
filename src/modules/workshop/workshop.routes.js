@@ -2,6 +2,7 @@
 import UserRoles from '../../core/auth/constants/userRoles';
 import WorkshopController from './workshop.controller';
 import { workshop } from './workshop.resolve';
+import { carBrands } from '../home/home.resolve';
 
 /**
  * @ngInject
@@ -27,6 +28,7 @@ export default function routing(RouterHelper) {
           controllerAs: 'vm',
           resolve: {
             _workshop: workshop,
+            _carBrands: carBrands,
           },
         },
       },

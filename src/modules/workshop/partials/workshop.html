@@ -49,11 +49,22 @@
         <md-content class="md-padding">
             <h4 class="md-subhead no-margin-top no-margin-bottom">Kuvaus</h4>
 
-            <p class="md-body-1">Lorem ipsum dolor</p>
+            <p class="md-body-1">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet velit ex.
+                Mauris eget luctus tellus. Sed gravida mauris vel augue auctor, non rutrum tellus imperdiet.
+                Phasellus porta nisi at nisl hendrerit posuere. In sed ante elementum, dignissim lorem ut,
+                pulvinar augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia
+                Curae; Ut purus ipsum, molestie vitae ligula sed, convallis pellentesque ligula. Integer
+                dignissim in arcu in porta.
+            </p>
 
             <h4 class="md-subhead no-margin-top no-margin-bottom">Huoltaa merkkejä</h4>
 
-            <p class="md-body-1">Lorem ipsum dolor</p>
+            <md-chips ng-model="vm.carBrands" name="carBrand" readonly="true">
+                <md-chip-template>
+                    <small>{{$chip}}</small>
+                </md-chip-template>
+            </md-chips>
         </md-content>
     </md-content>
 </md-content>
