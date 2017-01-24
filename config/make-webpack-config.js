@@ -87,8 +87,10 @@ module.exports = function (options) {
     constants = {
       "API_URL": process.env.API_URL || "http://localhost/",
       "WHITELIST_DOMAINS": [ "localhost" ],
+      "GOOGLE_API_KEY" : ""
     }
   }
+
   _.forOwn(constants, (value, key) => {
     constants[key] = JSON.stringify(value);
   });

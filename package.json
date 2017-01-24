@@ -39,6 +39,7 @@
     "font-awesome": "4.7.0",
     "lodash": "4.17.4",
     "mdi": "1.7.22",
+    "ngmap": "^1.17.8",
     "ngstorage": "0.3.11"
   },
   "devDependencies": {

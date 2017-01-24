@@ -55,12 +55,16 @@
                     autosi uudesta asti ja ajoneuvovalmistajan takuu säilyy.
                 </p>
 
-                <p class="md-body-1 no-margin-top">
-                    Phasellus porta nisi at nisl hendrerit posuere. In sed ante elementum, dignissim lorem ut,
-                    pulvinar augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia
-                    Curae.
+                <p class="md-body-1 no-margin-top" data-ng-if="vm.workshop.description">
+                    {{ ::vm.workshop.description }}
                 </p>
+            </md-content>
+        </md-content>
 
+        <md-divider></md-divider>
+
+        <md-content class="md-padding">
+            <md-content class="md-padding">
                 <h4 class="md-subhead no-margin-top no-margin-bottom">Huoltaa merkkejä</h4>
 
                 <md-chips ng-model="vm.carBrands" name="carBrand" readonly="true">
@@ -68,6 +72,29 @@
                         <small>{{$chip}}</small>
                     </md-chip-template>
                 </md-chips>
+            </md-content>
+        </md-content>
+
+        <md-divider></md-divider>
+
+        <md-content class="md-padding">
+            <md-content class="md-padding">
+                <h4 class="md-subhead no-margin-top no-margin-bottom">Sijainti</h4>
+
+                <div map-lazy-load="https://maps.google.com/maps/api/js"
+                    map-lazy-load-params="{{vm.googleMapsUrl}}"
+                >
+                    <ng-map
+                        center="{{vm.workshop.address}} {{vm.workshop.postalCode}} {{vm.workshop.city}}"
+                        zoom="15"
+                        zoom-to-inlude-markers="true"
+                    >
+                        <marker
+                            position="{{vm.workshop.address}} {{vm.workshop.postalCode}} {{vm.workshop.city}}"
+                            label="{{vm.workshop.name}}"
+                        ></marker>
+                    </ng-map>
+                </div>
             </md-content>
         </md-content>
     </div>
