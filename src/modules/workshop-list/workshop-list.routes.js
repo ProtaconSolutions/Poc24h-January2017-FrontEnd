@@ -7,8 +7,9 @@ import { workshops } from './workshop-list.resolve';
 /**
  * @ngInject
  * @param RouterHelper
+ * @param WorkshopListSharedDataService
  */
-export default function routing(RouterHelper) {
+export default function routing(RouterHelper, WorkshopListSharedDataService) {
   const states = [{
     state: 'modules.workshop_list',
     config: {
@@ -24,6 +25,10 @@ export default function routing(RouterHelper) {
           controllerAs: 'vm',
           resolve: {
             _workshops: workshops,
+            _sharedData() {
+              // Set order to distance when coming to page
+              WorkshopListSharedDataService.order = 'distance';
+            },
           },
         },
         'header@': {
