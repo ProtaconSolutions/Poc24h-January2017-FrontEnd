@@ -30,6 +30,7 @@
     ],
     "no-nested-ternary": 1,
     "no-underscore-dangle": 0,
-    "import/no-extraneous-dependencies": 0
+    "import/no-extraneous-dependencies": 0,
+    "linebreak-style": ["off", "unix"]
   }
 }
