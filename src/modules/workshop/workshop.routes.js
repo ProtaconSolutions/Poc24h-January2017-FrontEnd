@@ -8,8 +8,9 @@ import { carBrands } from '../home/home.resolve';
 /**
  * @ngInject
  * @param RouterHelper
+ * @param WorkshopSharedDataService
  */
-export default function routing(RouterHelper) {
+export default function routing(RouterHelper, WorkshopSharedDataService) {
   const states = [{
     state: 'modules.workshop',
     config: {
@@ -30,6 +31,10 @@ export default function routing(RouterHelper) {
           resolve: {
             _workshop: workshop,
             _carBrands: carBrands,
+            _sharedData() {
+              // Set action to information when routing to workshop details
+              WorkshopSharedDataService.action = 'information';
+            },
           },
         },
         'header@': {
