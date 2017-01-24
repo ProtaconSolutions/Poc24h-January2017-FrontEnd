@@ -6,6 +6,7 @@ export default class WorkshopController {
    * Constructor of the class
    *
    * @param {$timeout}                  $timeout
+   * @param {config}                    config
    * @param {WorkshopSharedDataService} WorkshopSharedDataService
    * @param {LoggerService}             LoggerService
    * @param {WorkshopInterface}         _workshop
@@ -13,6 +14,7 @@ export default class WorkshopController {
    */
   constructor(
     $timeout,
+    config,
     WorkshopSharedDataService, LoggerService,
     _workshop,
     _carBrands,
@@ -26,6 +28,7 @@ export default class WorkshopController {
     this.carBrands = [...new Set(carBrands)].sort();
     this.emails = this.workshop.email.split(',').map(email => email.trim());
     this.loading = false;
+    this.googleMapsUrl = `https://maps.googleapis.com/maps/api/js?key=${config.GOOGLE_API_KEY}`;
 
     this.data = {
       contactType: 'puhelin',
