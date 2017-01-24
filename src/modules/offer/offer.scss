@@ -1,4 +1,6 @@
 .offer {
+  height:100%;
+
   .main-icon-container {
     padding-top: 16px;
 
@@ -33,7 +35,7 @@
 .offer-header {
   height: 140px;
   background-size: cover;
-  background-position: 0 -300px;
+  background-position: top right;
 }
 
 .offer-header-information {
