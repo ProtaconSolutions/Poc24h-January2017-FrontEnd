@@ -59,6 +59,14 @@ html {
   cursor: pointer;
 }
 
+.white {
+  color: white;
+
+  md-icon {
+    color: white;
+  }
+}
+
 /** lists */
 md-list .md-subheader {
   font-size: 24px;

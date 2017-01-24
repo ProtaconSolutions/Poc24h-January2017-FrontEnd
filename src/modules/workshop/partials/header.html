@@ -1,0 +1,47 @@
+<div class="md-whiteframe-z3">
+    <div class="workshop-header" style="background-image: url({{vm.backgroundImage}});">
+        <md-button class="md-icon-button white" aria-label="Takaisin" ng-click="vm.back()">
+            <md-icon>arrow_back</md-icon>
+        </md-button>
+    </div>
+
+    <md-toolbar>
+        <div class="workshop-header-information" layout="column" layout-align="start stretch">
+            <h4>{{ vm.workshop.name }}</h4>
+
+            <small>{{ vm.workshop.address }}, {{ vm.workshop.postalCode }} {{ vm.workshop.city }}</small>
+
+            <div class="rating-distance" layout="row" layout-align="space-between center">
+                <div>
+                    <small>{{ vm.workshop.rating / 2 | number: 1}}</small>
+
+                    <div
+                        data-angular-rating-icons
+                        data-ng-model="vm.workshop.rating"
+                        data-max=10
+                        data-icon-empty="fa-star-o"
+                        data-icon-full="fa-star"
+                        data-icon-hover="fa-star"
+                        data-color-base="white"
+                        data-color-selected="white"
+                        data-color-hover="white"
+                        data-icon-size="18"
+                        data-icon-spacing="14"
+                        data-read-only="true"
+                        data-decimal
+                    ></div>
+
+                    <small>({{ vm.workshop.ratingCount }})</small>
+                </div>
+
+                <div>
+                    <md-icon class="md-primary">location_on</md-icon>
+
+                    <small>
+                        {{ ::vm.workshop.distance | number: 1}}km
+                    </small>
+                </div>
+            </div>
+        </div>
+    </md-toolbar>
+</div>

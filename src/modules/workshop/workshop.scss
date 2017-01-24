@@ -6,6 +6,7 @@
       min-height: 32px;
       max-height: 32px;
       font-size: 32px;
+      width: 32px;
     }
 
     md-button {
@@ -25,6 +26,32 @@
   md-list-item {
     .md-button {
       margin: 0 -6px;
+    }
+  }
+}
+
+.workshop-header {
+  height: 140px;
+  background-size: cover;
+  background-position: 0 -300px;
+}
+
+.workshop-header-information {
+  padding: 16px 24px;
+
+  h4 {
+    margin: 0 0 4px 0;
+  }
+
+  .angular-rating-icons {
+    position: relative;
+    top: 2px;
+    margin: 0 8px;
+  }
+
+  .rating-distance {
+    small {
+      font-size: 12px;
     }
   }
 }
