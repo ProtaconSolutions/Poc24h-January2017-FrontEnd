@@ -7,7 +7,11 @@
         </label>
 
         <md-select required="true" data-ng-model="vm.serviceType">
-          <md-option data-ng-value="serviceType.name" data-ng-repeat="serviceType in vm.serviceTypes">
+          <md-option
+            data-ng-value="serviceType.name"
+            data-ng-repeat="serviceType in vm.serviceTypes"
+            data-ng-selected="$first"
+          >
             {{::serviceType.name}}
           </md-option>
         </md-select>
